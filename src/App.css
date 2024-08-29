@@ -2,7 +2,10 @@
 
 html, body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+}
+
+* {
+  font-family: Inter;
 }
 
 #logo {
@@ -43,7 +46,7 @@ nav div a {
 
                                               /* HERO  */
 #hero-section {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   width: 100%;
   height: 100vh;
   margin: 0;
@@ -65,7 +68,7 @@ nav div a {
   height: 100%;
   background-repeat: no-repeat;
   border: 1px solid black;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 
 }
 
@@ -74,7 +77,7 @@ nav div a {
   max-width: 600px;
   margin-left: 40px;
   margin-top: 180px;
-  color: white;
+  color: rgb(255, 255, 255);
   /* border: 2px solid blue; */
   letter-spacing: 2px;
 }
@@ -90,4 +93,58 @@ nav div a {
   margin-bottom: 2px;
   font-weight: 400;
 
+}
+
+
+#menu-section {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(#000000 0%, #1C1C1C 63%, #FF6110 100%); 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+#menu-section h1{
+  margin: 0;
+  color: white;
+  font-size: 32px;
+  letter-spacing: 1px;
+  font-weight: 600;
+
+}
+
+#menu-section #card-container {
+  /* border: 2px solid red; */
+  width: 900px;
+  height: 470px;
+}
+
+.card {
+  color: white;
+  border: 1px solid #FF6110;
+  border-radius: 20px;
+  width: 200px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.card p {
+  font-size: 11px;
+  /* margin: 0; */
+}
+
+
+#menu-section #voir-plus-btn {
+  width: 160px;
+  height: 50px;
+  border-radius: 100px;
+  border: none;
+  background-color: #FF6110;
+  color: white;
+  font-size: 17px;
 }
