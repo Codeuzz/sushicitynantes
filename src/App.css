@@ -6,6 +6,7 @@ html, body {
 
 * {
   font-family: Inter;
+  scroll-behavior: smooth;
 }
 
 #logo {
@@ -98,7 +99,7 @@ nav div a {
 
 #menu-section {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background-image: linear-gradient(#000000 0%, #1C1C1C 63%, #FF6110 100%); 
   display: flex;
   flex-direction: column;
@@ -117,34 +118,92 @@ nav div a {
 
 #menu-section #card-container {
   /* border: 2px solid red; */
-  width: 900px;
-  height: 470px;
+  min-width: 900px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  row-gap: 40px;
+  margin-top: 35px;
 }
+
+.sushi-img-container {
+  position: relative;
+  top: -55px;
+}
+.sushi-img-container img {
+  width: 190px;
+  margin: 0;
+  /* border: 2px solid red; */
+}
+
 
 .card {
   color: white;
-  border: 1px solid #FF6110;
+  border: 2px solid #FF6110;
   border-radius: 20px;
   width: 200px;
-  height: 230px;
   display: flex;
+  height: 230px;
   flex-direction: column;
-  gap: 10px;
-  position: relative;
+  align-items: center;
+  padding: 0 10px ;
+  box-sizing: border-box;
+  background-color: #1C1C1C;
 }
 
-.card p {
-  font-size: 11px;
-  /* margin: 0; */
+.card .sushi-text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 10px;
+  top: -70px;
+  /* border: 1px solid blue; */
+
+}
+
+.sushi-text * {
+  margin: 0;
+}
+
+.sushi-text p {
+  font-size: 10px;
+}
+.sushi-text h3 {
+  font-size: 15px;
+}
+
+.sushi-text h4 {
+  font-size: 13px;
+  color: #FF6110;
+}
+
+.card button {
+  margin: 0;
+  position: relative;
+  top: -50px;
+  width: 50px;
+  border-radius: 20px;
+  border: none;
+  padding: 5px;
+  background-color: #FF6110;
+}
+.card button:hover, #menu-section #voir-plus-btn:hover {
+  cursor: pointer;
+  background-color: #da5310; 
 }
 
 
 #menu-section #voir-plus-btn {
   width: 160px;
-  height: 50px;
   border-radius: 100px;
   border: none;
   background-color: #FF6110;
   color: white;
   font-size: 17px;
+  padding: 10px;
+}
+
+#contact-section {
+  height: 100vh;
+  background-color: #FF6110;
 }

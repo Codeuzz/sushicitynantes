@@ -2,6 +2,7 @@ import Navbar from './Navbar'
 import Hero from './Hero'
 import './App.css'
 import Menu from './Menu'
+import Contact from './Contact'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <Hero />
       <Menu />
+      <Contact />
     </>
   )
 }
