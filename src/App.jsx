@@ -3,6 +3,7 @@ import Hero from './Hero'
 import './App.css'
 import Menu from './Menu'
 import Contact from './Contact'
+import Footer from './Footer'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <Menu />
       <Contact />
+      <Footer />
     </>
   )
 }

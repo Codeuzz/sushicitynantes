@@ -266,7 +266,7 @@ iframe {
   align-items: start;
   justify-content: space-between;
   padding-top: 100px;
-  padding-right: 60px;
+  padding-right: 30px;
   padding-left: 30px;
 
   /* gap: 50px; */
@@ -276,7 +276,6 @@ iframe {
   border-bottom: 3px solid black;
   height: 480px;
   width: 480px;
-  padding: 0px 30px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -284,7 +283,7 @@ iframe {
 }
 
 .contact-text h1 {
-  font-size: 48px;
+  font-size: 45px;
   margin-bottom: 0;
   margin-top: 10px;
 }
@@ -305,4 +304,51 @@ iframe {
 
 .contact-address i {
   font-size: 30px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 10px 0 0 30px;
+}
+
+.social-icons a {
+  font-size: 25px;
+  text-decoration: none;
+  color: #000000;
+}
+
+footer {
+  margin: 0 auto;
+  width: 100%;
+  background-image: linear-gradient(#FF6110, #1C1C1C);
+  padding: 20px 10%;
+  box-sizing: border-box;
+  color: white;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+hr{
+  width: 110%;
+  background-color: white;
+  border: none;
+  height: 3px;
+  margin-left: -5%;
+  margin-top: 0;
+  margin-bottom: 15px;
+  justify-self: center;
+}
+
+#footer-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#footer-ps {
+  display: flex;
+  flex-direction: row;
+  gap: 20px
 }
