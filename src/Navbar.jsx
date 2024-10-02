@@ -3,7 +3,6 @@ function Navbar({changeClassName}) {
 
     return(
         <nav>
-            {/* <img id="logo" src="src\assets\Logo (2).svg" alt="SushiCity Logo" className={changeClassName ? 'black' : 'white'} /> */}
             <div id="nav-div">
                 <img id="sushi-logo"
                  src="src\assets\SushiCity__4_-removebg-preview 1 (1).svg" alt="SushiCity Logo" />
