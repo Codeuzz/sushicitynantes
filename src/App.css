@@ -125,12 +125,14 @@ a {
 
 #menu-section {
   width: 100%;
-  height: 120vh;
+  height: 150vh;
   background-image: linear-gradient(#000000 0%, #1C1C1C 63%, #FF6110 100%); 
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  margin: 0 auto;
+  /* border: 2px solid red; */
 }
 
 #menu-section h1{
@@ -144,12 +146,16 @@ a {
 
 #menu-section #card-container {
   /* border: 2px solid red; */
-  min-width: 900px;
-  position: relative;
+  max-width: 900px;
   display: grid;
-  grid-template-columns: repeat(4, 220px);
+  grid-template-columns: auto auto auto auto;
+  column-gap: 10px;
   row-gap: 40px;
   margin-top: 35px;
+  align-content: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sushi-img-container {
@@ -157,7 +163,7 @@ a {
   top: -55px;
 }
 .sushi-img-container img {
-  width: 190px;
+  max-width: 190px;
   margin: 0;
   /* border: 2px solid red; */
 }
@@ -192,14 +198,14 @@ a {
 }
 
 .sushi-text p {
-  font-size: 10px;
+  font-size: 0.6rem;
 }
 .sushi-text h3 {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .sushi-text h4 {
-  font-size: 13px;
+  font-size: 0.8rem;
   color: #FF6110;
 }
 
@@ -207,11 +213,12 @@ a {
   margin: 0;
   position: relative;
   top: -50px;
-  width: 50px;
-  border-radius: 20px;
+  width: fit-content;
+  border-radius: 10px;
   border: none;
-  padding: 5px;
+  padding: 5px 10px;
   background-color: #FF6110;
+  box-sizing: border-box;
 }
 .card button:hover, #menu-section #voir-plus-btn:hover {
   cursor: pointer;
@@ -225,12 +232,15 @@ a {
   border: none;
   background-color: #FF6110;
   color: white;
-  font-size: 17px;
+  font-size: 1.1rem;
   padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+
 }
 
 #contact-section {
-  height: 100vh;
+  /* height: 120vh; */
   background-color: #FF6110;
 }
 
@@ -239,7 +249,7 @@ a {
   height: 480px;
   border-radius: 60px;
   border: 20px solid black;
-  background-color: black;
+  /* background-color: black; */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -260,6 +270,7 @@ iframe {
 #contact-div {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: start;
   justify-content: space-between;
   padding-top: 100px;
@@ -296,11 +307,11 @@ iframe {
 }
 
 .contact-telephone i {
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 .contact-address i {
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 
 .social-icons {
@@ -335,7 +346,6 @@ hr{
   margin-left: -5%;
   margin-top: 0;
   margin-bottom: 15px;
-  justify-self: center;
 }
 
 #footer-div {
@@ -348,4 +358,52 @@ hr{
   display: flex;
   flex-direction: row;
   gap: 20px
+}
+
+
+@media screen and (max-width: 904px) {
+  #hero-div {
+    background-size: 100% auto;
+    background-position: -5px 0;
+  }
+  #hero-text {
+    max-width: 500px;
+  }
+
+  #hero-text h1 {
+    font-size: 38px;
+  }
+  #menu-section #card-container {
+    width: fit-content;
+    grid-template-columns: auto auto auto;
+  }
+  #menu-section #voir-plus-btn {
+    margin-bottom: 180px;
+  }
+  #contact-div {
+    justify-content: center;
+    /* border: 1px solid blue; */
+    gap: 20px
+  }
+  .contact-text {
+    width: fit-content;
+    text-align: center;
+    /* border: 1px solid red; */
+    height: fit-content;
+    padding-bottom: 15px;
+  }
+  .contact-text br {
+    display: none;
+  }
+  .contact-address, .contact-telephone {
+    justify-content: center;
+  }
+  .map-container, iframe {
+    width: 100%;
+  }
+  .social-icons {
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 auto;
+  }
 }
