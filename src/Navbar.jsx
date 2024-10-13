@@ -12,7 +12,7 @@ function Navbar({changeClassName}) {
                 <img src={SushiTextLogo} alt="SushiCity-text" id="sushi-text-logo"
                 className={changeClassName ? 'black' : 'white'} />
             </div>
-            <div>
+            <div id="nav-a-div">
                 <a className={changeClassName ? 'black-anchor' : ''} href="#hero-section">Accueil</a>
                 <a className={changeClassName ? 'black-anchor' : ''} href="#menu-section">Nos créations</a>
                 <a className={changeClassName ? 'black-anchor' : ''} href="#contact-section">Contact</a>

@@ -27,7 +27,8 @@ html, body {
 .black-anchor {
   color: black;
   text-shadow: 0px 0px 0px black;
-
+  background-color:rgba(0, 0, 0, 0);
+  border: 3px solid black;
 
 }
 
@@ -40,10 +41,12 @@ html, body {
 nav {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
+  align-items: center;
 
 }
 
@@ -60,10 +63,18 @@ nav div {
 nav div a {
   text-decoration: none;
   font-size: 15px;
-  color: white;
-  text-shadow: 0px 0px 1px black;
+  color: rgb(255, 255, 255);
+  /* text-shadow: 0px 0px 1px black; */
   cursor: pointer;
+  background-color: #000000e1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(255, 255, 255);
+  width: fit-content;
+  white-space: nowrap;
 }
+
+
 
 a {
   cursor: pointer;
@@ -89,7 +100,7 @@ a {
   padding: 0;
   background-image: url("/src/assets/hero-sushi.png");
   background-size: contain;
-  background-position: 80px;
+  background-position: right 0;
   /* background-color: black; */
   /* width: 100%; */
   height: 100%;
@@ -274,26 +285,28 @@ iframe {
   align-items: start;
   justify-content: space-between;
   padding-top: 100px;
-  padding-right: 30px;
-  padding-left: 30px;
-
-  /* gap: 50px; */
+  padding: 100px 10px 0px;
+  justify-content: center;
+  gap: 3rem;
+  box-sizing: border-box;
 }
 
 .contact-text {
-  border-bottom: 3px solid black;
-  height: 480px;
   width: 480px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 15px
+  gap: 1.2rem
 }
 
 .contact-text h1 {
-  font-size: 45px;
+  font-size: 3rem;
   margin-bottom: 0;
   margin-top: 10px;
+}
+
+.contact-text h3 {
+  margin: 0;
 }
 
 .contact-address, .contact-telephone  {
@@ -318,7 +331,6 @@ iframe {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  margin: 10px 0 0 30px;
 }
 
 .social-icons a {
@@ -360,12 +372,26 @@ hr{
   gap: 20px
 }
 
+@media screen and (max-width: 1024px) {
+  #contact-div {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .contact-text {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: fit-content;
+  }
+  .map-container, iframe {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 904px) {
-  #hero-div {
-    background-size: 100% auto;
-    background-position: -5px 0;
-  }
+  
   #hero-text {
     max-width: 500px;
   }
@@ -390,20 +416,22 @@ hr{
     text-align: center;
     /* border: 1px solid red; */
     height: fit-content;
-    padding-bottom: 15px;
-  }
-  .contact-text br {
-    display: none;
   }
   .contact-address, .contact-telephone {
     justify-content: center;
   }
-  .map-container, iframe {
-    width: 100%;
-  }
-  .social-icons {
-    justify-content: center;
-    align-items: center;
-    margin: 15px 0 auto;
-  }
 }
+
+
+/* @media screen and (max-width: 844px) {
+  #hero-text h1 {
+    text-align: center;
+  }
+  #hero-text h1 span{
+    border: 3px solid white;
+    background-color: #866868;
+    border-radius: 5px;
+    padding: 10px;
+    letter-spacing: normal;
+  }
+} */
