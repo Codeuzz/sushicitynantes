@@ -402,6 +402,7 @@ hr{
     width: fit-content;
     grid-template-columns: auto auto auto;
   }
+
   #contact-div {
     justify-content: center;
     /* border: 1px solid blue; */
@@ -448,6 +449,10 @@ hr{
     #nav-a-div {
       padding: 0;
     }
+
+    #menu-section #voir-plus-btn {
+      box-shadow: 1px 2px 2px black
+    }
 }
 
 @media screen and (max-width: 699px) {
@@ -463,6 +468,8 @@ hr{
     grid-template-columns: auto auto;
     gap: 7vh 5vw;
   }
+
+  
 
   .contact-text h1 { 
     margin-top: 10vh; 
@@ -498,7 +505,11 @@ hr{
   #footer-div {
     flex-direction: column;
     align-items: center;
-  } 
+  }
+  
+  .contact-text h1 { 
+    margin-top: 2vh; 
+  }
 
 }
 
@@ -523,5 +534,8 @@ hr{
   }
   .map-container {
     border: 13px solid black;
+  }
+  .contact-text h1 { 
+    margin-top: 10vh; 
   }
 }
