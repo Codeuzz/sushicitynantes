@@ -90,7 +90,6 @@ a {
   margin: 0;
   /* border: 2px solid red; */
   box-sizing: border-box;
-
 }
 
 
@@ -136,7 +135,7 @@ a {
 
 #menu-section {
   width: 100%;
-  height: 150vh;
+  min-height: 100vh;
   background-image: linear-gradient(#000000 0%, #1C1C1C 63%, #FF6110 100%); 
   display: flex;
   flex-direction: column;
@@ -251,7 +250,7 @@ a {
 }
 
 #contact-section {
-  /* height: 120vh; */
+  min-height: 100vh;
   background-color: #FF6110;
 }
 
@@ -302,7 +301,7 @@ iframe {
 .contact-text h1 {
   font-size: 3rem;
   margin-bottom: 0;
-  margin-top: 10px;
+  margin-top: auto;
 }
 
 .contact-text h3 {
@@ -403,9 +402,6 @@ hr{
     width: fit-content;
     grid-template-columns: auto auto auto;
   }
-  #menu-section #voir-plus-btn {
-    margin-bottom: 180px;
-  }
   #contact-div {
     justify-content: center;
     /* border: 1px solid blue; */
@@ -423,15 +419,109 @@ hr{
 }
 
 
-/* @media screen and (max-width: 844px) {
-  #hero-text h1 {
-    text-align: center;
+@media screen and (max-width: 844px) {
+
+  #hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  #hero-text h1 span{
-    border: 3px solid white;
-    background-color: #866868;
-    border-radius: 5px;
-    padding: 10px;
-    letter-spacing: normal;
+    #hero-text h1, #hero-text h3{
+      text-shadow: 1px 1px black
+    }
+
+    #hero-text {
+      text-align: center;
+      margin-left: 0;
+      margin-top: 160px;
+      /* border: 2px solid red */
+    }
+
+    #hero-div {
+      background-image: url("/src/assets/hero-sushi-cropped-dark.png");
+      background-size: contain;
+      background-position: center;
+      /* background-color: red; */;
+    }
+
+    #nav-a-div {
+      padding: 0;
+    }
+}
+
+@media screen and (max-width: 699px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    gap: 0;
   }
-} */
+  
+  #menu-section #card-container {
+    grid-template-columns: auto auto;
+    gap: 7vh 5vw;
+  }
+
+  .contact-text h1 { 
+    margin-top: 10vh; 
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  #menu-section #card-container {
+    grid-template-columns: auto auto;
+    gap: 7vh 2vw;
+  }
+
+}
+
+@media screen and (max-width: 430px) {
+  #menu-section #card-container {
+    grid-template-columns: auto;
+    gap: 7vh 2vw;
+  }
+
+  #nav-a-div {
+    gap: 10px
+  }
+
+  #nav-div {
+    gap: 80px;
+  }
+  #sushi-logo {
+    width: 70px;
+  }
+
+  #footer-div {
+    flex-direction: column;
+    align-items: center;
+  } 
+
+}
+
+@media screen and (max-width: 306px) {
+  #nav-a-div {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  #footer-ps {
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+  }
+
+  .map-container, iframe {
+    height: 350px;
+  }
+
+  iframe {
+    border-radius: 47px;
+  }
+  .map-container {
+    border: 13px solid black;
+  }
+}
